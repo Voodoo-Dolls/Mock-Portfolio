@@ -1,9 +1,12 @@
 :root{
-    --gradient1:;
-    --gradient2:;
-    --projectBackground:;
-    --skillsBackground:;
-    --contactBackground:;
+    --purple1:#25064C;
+    --purple2:#36175E;
+    --purple3:#553285;
+    --purple4:#7B52AB;
+    --purple5:#9768D1;
+    --blue1:#456F74;
+    --orange1:#EB5937;
+    --black:#403D3C;
 }
 *{
     margin:0;
@@ -18,20 +21,24 @@ body{
 .container{
     max-width:1280px;
     text-align: center;
-    border:red solid 4px;
     margin:auto;
 }
 
 .container h2{
-    font-size:24px;
+    font-size:40px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none ;
 }
 
 /* Nav Bar */
 nav{
     width:100%;
-    background-color: #195962;
+    background-color: var(--purple1);
     position: fixed;
-    padding:12px 0;
+    padding:24px 0;
 }
 nav ul{
     display:flex;
@@ -43,6 +50,10 @@ nav ul{
     padding:0 16px;
 }
 
+nav a{
+    color:white;
+}
+
 /* Header Banner */
 header{
     display:flex;
@@ -50,8 +61,7 @@ header{
     justify-content: center;
     gap:8px;
     height:100vh;
-    border:green solid 1px;
-    background:linear-gradient(62deg,rgb(30, 30, 30),rgb(67, 67, 67));
+    background:linear-gradient(62deg,var(--purple4),var(--purple2));
     text-align: center;
     color:white;
     font-size:24px;
@@ -64,24 +74,34 @@ header{
 #project{
     height:fit-content;
     padding:32px 0;
-    background-color:#FFFFFF;
+    background-color:var(--orange1);
     width:100%;
-    border:green solid 1px;
+
 }
 
-.project{
-    border:red solid 1px;
-}
+
 .project_container{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 16px;
     width:100%;
 }
-.project a{
-    width:fit-content;
+
+
+.project{
+    border:black solid 4px;
 }
 .project img{
     width:100%;
     height:auto;
+}
+
+.project a{
+    text-decoration: none;
+}
+.project_title{
+    color:white;
+    font-size:24px;
+    padding:24px 0;
+    background-color:var(--black);
 }
