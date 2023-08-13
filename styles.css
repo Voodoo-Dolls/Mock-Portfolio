@@ -15,7 +15,8 @@
 }
 
 body{
-    font-family:'Arial';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .container{
@@ -80,7 +81,7 @@ header{
 
 .project_grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     width:100%;
 }
 
@@ -108,13 +109,107 @@ header{
 /* Skills */
 .skills_grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     width:100%;
 }
 .skill{
-    border:solid black 1px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border:solid black 4px;
     margin:16px;
+    padding-top:16px;
+    padding-bottom:16px;;
+}
+
+/* Skill Styling */
+.skills_grid .skill:nth-of-type(1) i{
+    color:white;
+}
+.skill:nth-of-type(1){
+    background-color: #e44d26;
+    border-color:#ffbf00;
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(2) i{
+    color:#4285F4;
+}
+.skill:nth-of-type(2){
+    border-color:#4285F4;
+}
+
+.skill:nth-of-type(3){
+    border-color:#f0db4f;
+    background-color: #323330;
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(3) i{
+    color:#f0db4f;
+}
+
+.skill:nth-of-type(4){
+    border-color:#40D0FB;
+    background-color:#18152E;
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(4) i{
+    color:#40D0FB;
+}
+
+
+.skill:nth-of-type(5){
+    border-color: #f8a829;
+    background-color:  #3c240c ;
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(5) i{
+    color: #f8a829 ;
+}
+
+
+.skill:nth-of-type(6){
+    border-color: #cf96fd ;
+    background-color: #393665;
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(6) i{
+    color: #cf96fd ;
+}
+
+.skill:nth-of-type(7){
+    border-color:#58427c;
+}
+
+.skills_grid .skill:nth-of-type(7) i{
+    color:#58427c;
+}
+
+.skill:nth-of-type(8){
+    border-color:#61dbfb;
+}
+
+.skills_grid .skill:nth-of-type(8) i{
+    color:#61dbfb;
+}
+
+.skill:nth-of-type(9){
+    border-color:rgb(121, 121, 121);
+    background-color: rgb(39, 39, 39);
+    color:white;
+}
+
+.skills_grid .skill:nth-of-type(9) i{
+    color:white;
 }
 .icon{
-    font-size:90px;
+    font-size:60px;
+}
+
+.skill_title{
+    margin-top:8px;
 }
