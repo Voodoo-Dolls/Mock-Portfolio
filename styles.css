@@ -1,12 +1,8 @@
 :root {
-    --purple1: #25064C;
-    --purple2: #36175eab;
-    --purple3: #553285;
-    --purple4: #7c52ab96;
-    --purple5: #9768D1;
-    --blue1: #456F74;
-    --orange1: #EB5937;
-    --black: #403D3C;
+    --black: #252932;
+    --dark: #191C21;
+    --blue: #195962b0;
+    --pink: #f56e6ca7;
 }
 
 * {
@@ -30,19 +26,14 @@ body {
 
 
 .container h2 {
-    font-size: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-    text-decoration-skip-ink: none;
+    font-size: 55px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 /* Nav Bar */
 nav {
     width: 100%;
-    background-color: var(--purple1);
+    background-color: var(--dark);
     position: fixed;
     padding: 24px 0;
     z-index: 2;
@@ -60,6 +51,11 @@ nav ul {
 
 nav a {
     color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Header Banner */
@@ -69,10 +65,28 @@ header {
     justify-content: center;
     gap: 8px;
     height: 100vh;
-    background: linear-gradient(62deg, var(--purple4), var(--purple2));
     text-align: center;
     color: white;
     font-size: 28px;
+    background: linear-gradient(60deg, var(--blue), var(--pink), var(--blue));
+    background-size: 600% 600%;
+    animation: gradient 24s ease infinite;
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 70%
+    }
+
+    50% {
+        background-position: 100% 31%
+    }
+
+    100% {
+        background-position: 0% 70%
+    }
 }
 
 /* BG Fade */
@@ -172,6 +186,8 @@ header {
 /* Revolving Words */
 
 .word_container {
+    position: relative;
+    left: 24px;
     display: flex;
     justify-content: center;
     font-size: 36px;
@@ -191,6 +207,7 @@ header {
 .word_list li {
     animation: revolve 12s ease-out infinite;
     margin-bottom: 4px;
+    color: rgb(0, 255, 225);
 
 
 
@@ -262,45 +279,96 @@ header {
 
 #projects {
     height: fit-content;
-    background-color: var(--orange1);
+    background-color: #23254C;
     width: 100%;
+    height: fit-content;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+
+
+
+
+.projects h2 {
+    position: relative;
+    top: 10%;
+    text-align: left;
+    border-bottom: white solid 4px;
+    width: 60%;
 }
 
 
 .project_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    width: 95vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-
 .project {
-    margin: 24px;
-    border: black solid 4px;
+    overflow: hidden;
+    max-width: 600px;
 }
 
 .project img {
     width: 100%;
+    margin-bottom: -4px;
 }
 
 .project a {
     text-decoration: none;
-    height: 100%;
+    color: white;
+    position: relative;
 }
+
 
 .project_title {
-    color: white;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 24px;
-    padding: 24px 0;
-    background-color: var(--black);
-    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.77);
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    padding: 16px;
+    transform: translateY(100%);
+    transition: transform 1s ease;
 }
 
+.project a:hover .project_title {
+    transform: translateY(0%);
+}
+
+
+/* 
+
+
 /* Skills */
+#skills {
+    background-color: #23254C;
+}
+
+#skills h2 {
+    color: white;
+    position: relative;
+    top: 10%;
+    text-align: left;
+    border-bottom: white solid 4px;
+    margin-bottom: 40px;
+    width: 60%;
+}
+
 .skills_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
+
 }
 
 .skill {
@@ -311,7 +379,6 @@ header {
     margin: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
-    ;
 }
 
 /* Skill Styling */
@@ -331,6 +398,7 @@ header {
 
 .skill:nth-of-type(2) {
     border-color: #4285F4;
+    background-color: white;
 }
 
 .skill:nth-of-type(3) {
@@ -377,6 +445,7 @@ header {
 
 .skill:nth-of-type(7) {
     border-color: #58427c;
+    background-color: white;
 }
 
 .skills_grid .skill:nth-of-type(7) i {
@@ -385,6 +454,7 @@ header {
 
 .skill:nth-of-type(8) {
     border-color: #61dbfb;
+    background-color: white;
 }
 
 .skills_grid .skill:nth-of-type(8) i {
@@ -430,7 +500,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background-color: #323330;
+    background-color: var(--dark);
     text-align: center;
     width: 100%;
     color: white;
@@ -491,18 +561,18 @@ header {
 
 .dot1 {
     margin-left: 2px;
-    animation: dot1 4s ease-in-out 1s infinite;
+    animation: dot 4s ease-in-out 1s infinite;
 }
 
 .dot2 {
-    animation: dot1 4s ease-in-out 2s infinite;
+    animation: dot 4s ease-in-out 2s infinite;
 }
 
 .dot3 {
-    animation: dot1 4s ease-in-out 3s infinite;
+    animation: dot 4s ease-in-out 3s infinite;
 }
 
-@keyframes dot1 {
+@keyframes dot {
     0% {
         bottom: 0px;
     }
