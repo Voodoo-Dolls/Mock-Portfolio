@@ -15,6 +15,19 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 
 .container {
     max-width: 1280px;
@@ -28,6 +41,12 @@ body {
 .container h2 {
     font-size: 55px;
     font-family: 'Nunito Sans', sans-serif;
+}
+
+@media only screen and (max-width: 1280px) {
+    .container h2 {
+        margin-left: 50px;
+    }
 }
 
 /* Nav Bar */
