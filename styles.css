@@ -1,8 +1,8 @@
 :root {
     --purple1: #25064C;
-    --purple2: #36175E;
+    --purple2: #36175eab;
     --purple3: #553285;
-    --purple4: #7B52AB;
+    --purple4: #7c52ab96;
     --purple5: #9768D1;
     --blue1: #456F74;
     --orange1: #EB5937;
@@ -45,6 +45,7 @@ nav {
     background-color: var(--purple1);
     position: fixed;
     padding: 24px 0;
+    z-index: 2;
 }
 
 nav ul {
@@ -71,8 +72,68 @@ header {
     background: linear-gradient(62deg, var(--purple4), var(--purple2));
     text-align: center;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
 }
+
+/* BG Fade */
+.bg1,
+.bg2,
+.bg3 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: top;
+    opacity: 100;
+    transition: opacity linear 5s;
+}
+
+.bg1 {
+    background-image: url("https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
+}
+
+.bg2 {
+    background-image: url("https://cdn.discordapp.com/attachments/474030884207722496/1097280282060656782/DSC_6938.JPG");
+    animation: fade 30s 10s linear infinite;
+}
+
+.bg3 {
+    background-image: url("https://cdn.discordapp.com/attachments/217457291891310602/1097338878886695032/Portrait.jpg");
+    animation: fade 30s 0s linear infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 100;
+    }
+
+    27% {
+        opacity: 100;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    94% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+
+}
+
+/* Wave Animation */
 
 .wave {
     display: inline-block;
@@ -108,6 +169,94 @@ header {
 
 
 
+/* Revolving Words */
+
+.word_container {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.word_list {
+    list-style: none;
+    font-style: italic;
+    margin-left: 6px;
+    text-align: left;
+    overflow: hidden;
+    /* border: red solid 1px; */
+    height: 48px;
+    width: 250px;
+}
+
+.word_list li {
+    animation: revolve 12s ease-out infinite;
+    margin-bottom: 4px;
+
+
+
+}
+
+@keyframes revolve {
+    0% {
+        transform: translateY(0)
+    }
+
+    18% {
+        transform: translateY(0)
+    }
+
+    22% {
+        transform: translateY(-140%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    30% {
+        transform: translateY(-110%);
+    }
+
+    48% {
+        transform: translateY(-110%);
+    }
+
+    52% {
+        transform: translateY(-250%);
+    }
+
+    55% {
+        transform: translateY(-210%);
+    }
+
+    60% {
+        transform: translateY(-218%);
+    }
+
+    78% {
+        transform: translateY(-218%);
+    }
+
+    90% {
+        transform: translateY(50%);
+    }
+
+    95% {
+        transform: translateY(-30%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+
+
+
+
+
+
+
+}
 
 /* Projects */
 
